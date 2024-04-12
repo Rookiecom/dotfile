@@ -19,10 +19,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/Rookiecom/dotfile.git
 
-cp dotfile/.zshrc ~/
+cp dotfile/zsh/.zshrc ~/
 # 最重要的zsh 配置文件
 
-cp -r dotfile/.zfunc ~/
+cp -r dotfile/zsh/.zfunc ~/
 # 一些命令的补全规则
 
 cp dotfile/zsh/{.fzf-tab.zsh,.fzf.preview.content} ~/
