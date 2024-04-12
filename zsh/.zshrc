@@ -96,8 +96,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-export RISCV=~/riscv64-elf-gcc
-export PATH=$PATH:$RISCV/bin
 
 if [[ ! "$PATH" == */home/pcq/.fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/home/pcq/.fzf/bin"
