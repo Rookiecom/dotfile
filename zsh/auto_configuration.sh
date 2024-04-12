@@ -31,3 +31,5 @@ sudo cp dotfile/zsh/lesspipe.sh /usr/local/bin/
 # fzf tab preview 备用方案
 
 rm -rf dotfile
+
+source ~/.zshrc
