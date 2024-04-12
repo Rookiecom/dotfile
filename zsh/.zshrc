@@ -132,11 +132,6 @@ export LESSOPEN
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='lsd'
-alias ll='lsd -l'
-alias la='lsd -lA'
-alias lt='lsd --tree'
-alias cat='bat'
 # alias vim='nvim'
 
 
