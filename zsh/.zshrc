@@ -94,21 +94,10 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+source ~/.config/terminal/.env
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
-
-if [[ ! "$PATH" == */home/pcq/.fzf/bin* ]]; then
-  PATH="${PATH:+${PATH}:}/home/pcq/.fzf/bin"
-fi
-
-# GOLANG
-export GOPATH=/home/pcq/go
-export GOBIN=$GOPATH/bin
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOPATH:$GOBIN:$GOROOT
-
-LESSOPEN="|/usr/local/bin/lesspipe.sh %s"
-export LESSOPEN
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -134,23 +123,16 @@ export LESSOPEN
 
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.config/terminal/.p10k.zsh ]] || source ~/.config/terminal/.p10k.zsh
 
 # add fzf support
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.config/terminal/.fzf.zsh ] && source ~/.config/terminal/.fzf.zsh
 # add fzf-tab support 
-[ -f ~/.fzf-tab.zsh ] && source ~/.fzf-tab.zsh
+[ -f ~/.config/terminal/.fzf-tab.zsh ] && source ~/.config/terminal/.fzf-tab.zsh
 
 # add .zfunc to fpath for store some zsh function
-fpath=(~/.zfunc $fpath)
+fpath=(~/.config/terminal/.zfunc $fpath)
 
-# install nvm auto add
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# try to add some configuration to fzf tab source 
-# zstyle ':fzf-tab:sources' config-directory ~/.fzf.zsh
 
 # compinit should be the end
 autoload -U compinit

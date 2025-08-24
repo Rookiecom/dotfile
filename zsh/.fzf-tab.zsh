@@ -21,7 +21,7 @@ zstyle ':fzf-tab:complete:systemctl-*:*' fzf-preview 'SYSTEMD_COLORS=1 systemctl
 
 # show dictionary file and the special
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
-export LESSOPEN='|~/.fzf.preview.content %s'
+export LESSOPEN='|~/.config/terminal/.fzf.preview.content %s'
 # set option(-|--)has no preview-window,but the options is provided from the completion file 
 # which means that if the file doesn't provided the options or argument-1,this configuration has no effect
 zstyle ':fzf-tab:complete:*:options' fzf-preview 
