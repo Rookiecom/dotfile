@@ -1,9 +1,28 @@
 # ZSH 配置
 
+基础配置
+
+现在仅仅限于ubuntu/debian
+
 ```shell
-sudo apt install zsh
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" # oh my zsh
 sh -c "$(wget https://raw.githubusercontent.com/Rookiecom/dotfile/main/zsh/auto_configuration.sh -O -)"
 ```
 
-注意：如果失败，大概率是环境变量等奇怪的问题，检查检查
+进阶配置
+
+有些美化配置必须要安装bat lsd这种，所以依次执行下面的命令
+
+```shell
+curl https://sh.rustup.rs -sSf | sh
+
+cargo install --locked bat lsd xsv
+
+# chafa exiftool in2csv ignore
+
+# 配置man的美化， 可以整体执行，直到 eof
+cat <<'EOF' >> ~/.config/terminal/.env
+
+# man beautiful
+export MANPAGER="sh -c 'awk '\''{ gsub(/\x1B\[[0-9;]*m/, \"\", \$0); gsub(/.\x08/, \"\", \$0); print }'\'' | bat -p -lman'"
+EOF
+```
